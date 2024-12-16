@@ -4,5 +4,8 @@
     <Compile Update="frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

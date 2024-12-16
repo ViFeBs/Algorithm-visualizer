@@ -16,3 +16,4 @@ D:\projetos\Projetos GIT\Algorithm-visualizer\Algorithm-visualizer\Algorithm-vis
 D:\projetos\Projetos GIT\Algorithm-visualizer\Algorithm-visualizer\Algorithm-visualizer\obj\Debug\net8.0-windows\Algorithm-visualizer.pdb
 D:\projetos\Projetos GIT\Algorithm-visualizer\Algorithm-visualizer\Algorithm-visualizer\obj\Debug\net8.0-windows\Algorithm-visualizer.genruntimeconfig.cache
 D:\projetos\Projetos GIT\Algorithm-visualizer\Algorithm-visualizer\Algorithm-visualizer\obj\Debug\net8.0-windows\ref\Algorithm-visualizer.dll
+D:\projetos\Projetos GIT\Algorithm-visualizer\Algorithm-visualizer\Algorithm-visualizer\obj\Debug\net8.0-windows\Algorithm_visualizer.frmSearch.resources

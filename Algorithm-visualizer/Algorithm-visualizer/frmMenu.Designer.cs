@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             btnSort = new Button();
+            btnSearch = new Button();
             SuspendLayout();
             // 
             // btnSort
@@ -41,20 +42,34 @@
             btnSort.UseVisualStyleBackColor = true;
             btnSort.Click += btnSort_Click;
             // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(198, 65);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(105, 45);
+            btnSearch.TabIndex = 1;
+            btnSearch.Text = "Search Algorithm";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSearch);
             Controls.Add(btnSort);
             Name = "frmMenu";
             Text = "Menu";
             FormClosing += frmMenu_FormClosing;
+            Load += frmMenu_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnSort;
+        private Button btnSearch;
     }
 }
