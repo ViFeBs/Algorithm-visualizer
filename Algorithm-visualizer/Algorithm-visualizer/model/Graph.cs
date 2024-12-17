@@ -21,6 +21,8 @@ namespace Algorithm_visualizer.model
             }
         }
 
+        public List<int>[] getAdjlist() { return adjList; }
+
         // Adicionar aresta entre dois nós
         public void AddEdge(int v, int w)
         {

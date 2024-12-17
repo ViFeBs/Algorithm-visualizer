@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Algorithm-visualizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9f2b3208fbd7b39ee75239b2b29c47f291471b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec606c8fca9f6c5674ac02e99c64a12c965cee99")]
 [assembly: System.Reflection.AssemblyProductAttribute("Algorithm-visualizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Algorithm-visualizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

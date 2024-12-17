@@ -21,8 +21,6 @@ namespace Algorithm_visualizer
             InitializeComponent();
 
             lblGraph.Text = currentGraph.GetGraphAsText();
-            pnlAnimation.Paint += (s, e) => DrawGraph(pnlAnimation, currentGraph, 0);
-            pnlAnimation.Invalidate();
         }
 
         public async Task BFS(Graph graph, int start, Panel pnlAnimation)
@@ -111,6 +109,87 @@ namespace Algorithm_visualizer
             }
         }
 
+        //metodo Draw do DFS
+        private void DrawGraph(Graphics g, int highlightNode = -1)
+        {
+            int nodeRadius = 20;
+            int totalNodes = currentGraph.getAdjlist().Length;
+
+            // Desenha as arestas
+            for (int i = 0; i < totalNodes; i++)
+            {
+                Point from = GetNodePosition(i, totalNodes, pnlAnimation.Width, pnlAnimation.Height);
+                foreach (int neighbor in currentGraph.getAdjlist()[i])
+                {
+                    Point to = GetNodePosition(neighbor, totalNodes, pnlAnimation.Width, pnlAnimation.Height);
+                    g.DrawLine(Pens.Black, from, to);
+                }
+            }
+
+            // Desenha os nós
+            for (int i = 0; i < totalNodes; i++)
+            {
+                Point position = GetNodePosition(i, totalNodes, pnlAnimation.Width, pnlAnimation.Height);
+                Brush brush = (i == highlightNode) ? Brushes.Red : Brushes.LightGray;
+
+                // Desenha o nó
+                g.FillEllipse(brush, position.X - nodeRadius, position.Y - nodeRadius, nodeRadius * 2, nodeRadius * 2);
+                g.DrawEllipse(Pens.Black, position.X - nodeRadius, position.Y - nodeRadius, nodeRadius * 2, nodeRadius * 2);
+
+                // Desenha o índice do nó
+                g.DrawString(i.ToString(), new Font("Arial", 10), Brushes.Black, position.X - 10, position.Y - 10);
+            }
+        }
+
+        private Point GetNodePosition(int index, int totalNodes, int panelWidth, int panelHeight)
+        {
+            double angle = (2 * Math.PI / totalNodes) * index; // Divide o círculo igualmente entre os nós
+            int centerX = panelWidth / 2;
+            int centerY = panelHeight / 2;
+            int radius = Math.Min(panelWidth, panelHeight) / 3; // Raio do círculo onde os nós ficarão
+
+            int x = centerX + (int)(radius * Math.Cos(angle));
+            int y = centerY + (int)(radius * Math.Sin(angle));
+
+            return new Point(x, y);
+        }
+
+
+        private async void RunDFSAnimation()
+        {
+            bool[] visited = new bool[currentGraph.getAdjlist().Length];
+            Stack<int> stack = new Stack<int>();
+            stack.Push(0); // Começa no nó 0 (ou outro inicial)
+            string result = "( ";
+
+            while (stack.Count > 0)
+            {
+                int currentNode = stack.Pop();
+
+                if (!visited[currentNode])
+                {
+                    visited[currentNode] = true;
+
+                    result += currentNode + " ";
+                    // Atualiza o desenho destacando o nó atual
+                    pnlAnimation.Invalidate();
+                    pnlAnimation.Paint += (s, e) => DrawGraph(e.Graphics, currentNode);
+                    await Task.Delay(500);
+
+                    // Adiciona os vizinhos à pilha
+                    foreach (int neighbor in currentGraph.getAdjlist()[currentNode])
+                    {
+                        if (!visited[neighbor])
+                            stack.Push(neighbor);
+                    }
+                }
+            }
+
+            result += " )";
+            lblResult.Text = result;
+            
+        }
+
 
         private async void btnBFS_Click(object sender, EventArgs e)
         {
@@ -128,13 +207,14 @@ namespace Algorithm_visualizer
             pnlAnimation.Invalidate(); // Redesenha o painel
         }
 
-        private void pnlAnimation_Paint(object sender, PaintEventArgs e)
+        private void pnlAnimation_Paint(object? sender, PaintEventArgs e)
         {
             if (currentGraph != null)
             {
                 DrawGraph(pnlAnimation, currentGraph);
             }
         }
+
 
         private void frmSearch_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -147,5 +227,12 @@ namespace Algorithm_visualizer
             frmMenu.Show();
             this.Hide();
         }
+
+        private void btnDFS_Click(object sender, EventArgs e)
+        {
+            
+            RunDFSAnimation();
+        }
+
     }
 }

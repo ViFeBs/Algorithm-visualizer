@@ -34,6 +34,7 @@
             btnBack = new Button();
             lblGraph = new Label();
             lblResult = new Label();
+            btnDFS = new Button();
             SuspendLayout();
             // 
             // pnlAnimation
@@ -45,9 +46,9 @@
             // 
             // btnBFS
             // 
-            btnBFS.Location = new Point(495, 38);
+            btnBFS.Location = new Point(502, 38);
             btnBFS.Name = "btnBFS";
-            btnBFS.Size = new Size(141, 41);
+            btnBFS.Size = new Size(73, 41);
             btnBFS.TabIndex = 1;
             btnBFS.Text = "BFS";
             btnBFS.UseVisualStyleBackColor = true;
@@ -91,12 +92,23 @@
             lblResult.TabIndex = 5;
             lblResult.Text = "Result";
             // 
+            // btnDFS
+            // 
+            btnDFS.Location = new Point(591, 38);
+            btnDFS.Name = "btnDFS";
+            btnDFS.Size = new Size(73, 41);
+            btnDFS.TabIndex = 6;
+            btnDFS.Text = "DFS";
+            btnDFS.UseVisualStyleBackColor = true;
+            btnDFS.Click += btnDFS_Click;
+            // 
             // frmSearch
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnDFS);
             Controls.Add(lblResult);
             Controls.Add(lblGraph);
             Controls.Add(btnBack);
@@ -118,5 +130,6 @@
         private Button btnBack;
         private Label lblGraph;
         private Label lblResult;
+        private Button btnDFS;
     }
 }
