@@ -30,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Graph.cs",
+              "DocumentMoniker": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\model\\Graph.cs",
+              "RelativeDocumentMoniker": "Algorithm-visualizer\\model\\Graph.cs",
+              "ToolTip": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\model\\Graph.cs",
+              "RelativeToolTip": "Algorithm-visualizer\\model\\Graph.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAADwvzUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T00:34:41.429Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -64,22 +77,9 @@
               "RelativeDocumentMoniker": "Algorithm-visualizer\\frmSearch.cs",
               "ToolTip": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\frmSearch.cs",
               "RelativeToolTip": "Algorithm-visualizer\\frmSearch.cs",
-              "ViewState": "AgIAANEAAAAAAAAAAAAAwL0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAAAOEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T21:32:50.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Graph.cs",
-              "DocumentMoniker": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\model\\Graph.cs",
-              "RelativeDocumentMoniker": "Algorithm-visualizer\\model\\Graph.cs",
-              "ToolTip": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\model\\Graph.cs",
-              "RelativeToolTip": "Algorithm-visualizer\\model\\Graph.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T21:31:46.918Z",
               "EditorCaption": ""
             },
             {
@@ -91,8 +91,7 @@
               "ToolTip": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\frmSearch.cs [Projeto]",
               "RelativeToolTip": "Algorithm-visualizer\\frmSearch.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T21:28:06.404Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2024-12-16T21:28:06.404Z"
             }
           ]
         }

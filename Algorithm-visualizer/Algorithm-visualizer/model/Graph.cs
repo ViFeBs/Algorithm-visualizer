@@ -22,6 +22,7 @@ namespace Algorithm_visualizer.model
         }
 
         public List<int>[] getAdjlist() { return adjList; }
+        public int getVertices() { return vertices; }
 
         // Adicionar aresta entre dois nós
         public void AddEdge(int v, int w)
@@ -46,6 +47,11 @@ namespace Algorithm_visualizer.model
         {
             Graph graph = new Graph(vertices);
             Random rand = new Random();
+
+            // Garantir que todos os vértices tenham pelo menos uma conexão
+            for (int i = 0; i < vertices - 1; i++) { 
+                graph.AddEdge(i, i + 1); 
+            }
 
             int edgeCount = 0;
 
@@ -79,6 +85,32 @@ namespace Algorithm_visualizer.model
             }
 
             return sb.ToString();
+        }
+
+        public int GetTreeDepth(int root)
+        {
+            HashSet<int> visited = new HashSet<int>();
+            Queue<(int node, int level)> queue = new Queue<(int, int)>();
+            queue.Enqueue((root, 0));
+
+            int maxDepth = 0;
+
+            while (queue.Count > 0)
+            {
+                var (node, level) = queue.Dequeue();
+                if (visited.Contains(node)) continue;
+
+                visited.Add(node);
+                maxDepth = Math.Max(maxDepth, level);
+
+                foreach (int neighbor in adjList[node]) // Adapte GetNeighbors ao seu grafo
+                {
+                    if (!visited.Contains(neighbor))
+                        queue.Enqueue((neighbor, level + 1));
+                }
+            }
+
+            return maxDepth;
         }
 
     }

@@ -41,7 +41,7 @@
             // 
             pnlAnimation.Location = new Point(12, 95);
             pnlAnimation.Name = "pnlAnimation";
-            pnlAnimation.Size = new Size(776, 343);
+            pnlAnimation.Size = new Size(841, 385);
             pnlAnimation.TabIndex = 0;
             // 
             // btnBFS
@@ -107,7 +107,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(864, 492);
             Controls.Add(btnDFS);
             Controls.Add(lblResult);
             Controls.Add(lblGraph);
