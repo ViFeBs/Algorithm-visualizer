@@ -42,16 +42,19 @@ namespace Algorithm_visualizer
             CalculateTreePositions(graph, panelWidth, panelHeight, nodePositions);
 
             // Verifica se todas as posições foram calculadas
-           
+
 
             // Desenhar as arestas (linhas)
-            Pen edgePen = new Pen(Color.Gray, 2); 
-            foreach (int i in Enumerable.Range(0, graph.GetVerticesCount())) { 
-                foreach (int neighbor in graph.GetNeighbors(i)) { 
-                    if (i < neighbor) { 
-                        g.DrawLine(edgePen, nodePositions[i], nodePositions[neighbor]); 
-                    } 
-                } 
+            Pen edgePen = new Pen(Color.Gray, 2);
+            foreach (int i in Enumerable.Range(0, graph.GetVerticesCount()))
+            {
+                foreach (int neighbor in graph.GetNeighbors(i))
+                {
+                    if (i < neighbor)
+                    {
+                        g.DrawLine(edgePen, nodePositions[i], nodePositions[neighbor]);
+                    }
+                }
             }
 
             // Desenhar as nós (circulos)
@@ -71,28 +74,66 @@ namespace Algorithm_visualizer
         private void CalculateTreePositions(Graph graph, int panelWidth, int panelHeight, Dictionary<int, Point> positions)
         {
             int root = 0; // Supondo que o nó 0 é a raiz
-            int level = 0; 
-            int xOffset = panelWidth / 2; 
+            int level = 0;
+            int xOffset = panelWidth / 2;
             int yOffset = 50;
             CalculateTreePositionsRecursive(graph, root, level, xOffset, yOffset, panelWidth / 4, positions);
         }
 
-        private void CalculateTreePositionsRecursive(Graph graph, int node, int level, int x, int y, int xSpacing, Dictionary<int, Point> positions) 
+        private void CalculateTreePositionsRecursive(Graph graph, int node, int level, int x, int y, int xSpacing, Dictionary<int, Point> positions)
         {
             int panelHeight = pnlAnimation.Height;
             y = Math.Min(y, panelHeight - 50);
 
-            positions[node] = new Point(x, y); 
-            var neighbors = graph.GetNeighbors(node).Where(n => !positions.ContainsKey(n)).ToList(); 
-            int numNeighbors = neighbors.Count; 
-            int childXSpacing = xSpacing / (numNeighbors > 1 ? numNeighbors : 2); 
-            for (int i = 0; i < numNeighbors; i++) 
-            { 
-                int childX = x + (i - numNeighbors / 2) * childXSpacing; 
-                int childY = y + 100; 
-                CalculateTreePositionsRecursive(graph, neighbors[i], level + 1, childX, childY, childXSpacing, positions); 
-            } 
+            positions[node] = new Point(x, y);
+            var neighbors = graph.GetNeighbors(node).Where(n => !positions.ContainsKey(n)).ToList();
+            int numNeighbors = neighbors.Count;
+            int childXSpacing = xSpacing / (numNeighbors > 1 ? numNeighbors : 2);
+            for (int i = 0; i < numNeighbors; i++)
+            {
+                int childX = x + (i - numNeighbors / 2) * childXSpacing;
+                int childY = y + 100;
+                CalculateTreePositionsRecursive(graph, neighbors[i], level + 1, childX, childY, childXSpacing, positions);
+            }
         }
+
+        public async Task Dijkstra(Graph graph, int start, Panel pnlAnimation)
+        {
+            var previous = graph.Dijkstra(start);
+            HashSet<int> visited = new HashSet<int>();
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(start);
+
+            PaintEventHandler paintHandler = null;
+            paintHandler = (s, e) => DrawGraph(e.Graphics, graph, -1);
+
+            while (queue.Count > 0)
+            {
+                int currentNode = queue.Dequeue();
+                if (!visited.Contains(currentNode))
+                {
+                    visited.Add(currentNode);
+
+                    pnlAnimation.Paint -= paintHandler;
+                    paintHandler = (s, e) => DrawGraph(e.Graphics, graph, currentNode);
+                    pnlAnimation.Paint += paintHandler;
+                    pnlAnimation.Invalidate();
+                    await Task.Delay(500);
+
+                    foreach (var neighbor in graph.GetNeighbors(currentNode))
+                    {
+                        if (!visited.Contains(neighbor))
+                        {
+                            queue.Enqueue(neighbor);
+                        }
+                    }
+                }
+            }
+
+            pnlAnimation.Paint -= paintHandler; // Remover o event handler após a animação
+            lblResult.Text = "Dijkstra's algorithm completed.";
+        }
+
 
         private async void RunDFSAnimation()
         {
@@ -111,7 +152,7 @@ namespace Algorithm_visualizer
                     visited[currentNode] = true;
 
                     result += currentNode + " ";
-                    
+
                     // Atualizar o desenho (mostrar o nó atual sendo visitado)
                     if (currentPaintHandler != null)
                         pnlAnimation.Paint -= currentPaintHandler;
@@ -197,11 +238,12 @@ namespace Algorithm_visualizer
             lblGraph.Text = currentGraph.GetGraphAsText();
             //redesenha painel
             // Remove o event handler atual para evitar duplicações
-            if (currentPaintHandler != null) { 
-                pnlAnimation.Paint -= currentPaintHandler; 
-            } 
+            if (currentPaintHandler != null)
+            {
+                pnlAnimation.Paint -= currentPaintHandler;
+            }
             // Define o novo event handler
-            currentPaintHandler = (s, e) => DrawGraph(e.Graphics, currentGraph); 
+            currentPaintHandler = (s, e) => DrawGraph(e.Graphics, currentGraph);
             pnlAnimation.Paint += currentPaintHandler;
             pnlAnimation.Invalidate();
         }
@@ -227,5 +269,9 @@ namespace Algorithm_visualizer
             RunDFSAnimation();
         }
 
+        private async void btnDijkstra_Click(object sender, EventArgs e)
+        {
+            await Dijkstra(currentGraph, 0, pnlAnimation);
+        }
     }
 }

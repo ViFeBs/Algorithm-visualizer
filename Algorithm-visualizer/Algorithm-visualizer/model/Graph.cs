@@ -113,5 +113,62 @@ namespace Algorithm_visualizer.model
             return maxDepth;
         }
 
+        public Dictionary<int, int> Dijkstra(int startVertex)
+        {
+            int n = vertices;
+            int[] dist = new int[n];
+            bool[] sptSet = new bool[n];
+            Dictionary<int, int> previous = new Dictionary<int, int>();
+
+            // Inicializa todas as distâncias como infinito e sptSet[] como falso
+            for (int i = 0; i < n; i++)
+            {
+                dist[i] = int.MaxValue;
+                sptSet[i] = false;
+            }
+
+            // A distância do nó inicial para ele mesmo é sempre 0
+            dist[startVertex] = 0;
+
+            for (int count = 0; count < n - 1; count++)
+            {
+                // Escolhe o vértice de distância mínima do conjunto de vértices
+                // ainda não processados. u é sempre igual a src na primeira iteração.
+                int u = MinDistance(dist, sptSet);
+
+                // Marca o vértice como processado
+                sptSet[u] = true;
+
+                // Atualiza o valor da distância dos vértices adjacentes do vértice escolhido.
+                foreach (var neighbor in GetNeighbors(u))
+                {
+                    if (!sptSet[neighbor] && dist[u] != int.MaxValue && dist[u] + 1 < dist[neighbor])
+                    {
+                        dist[neighbor] = dist[u] + 1;
+                        previous[neighbor] = u;
+                    }
+                }
+            }
+
+            return previous;
+        }
+
+        private int MinDistance(int[] dist, bool[] sptSet)
+        {
+            // Inicializa o valor mínimo
+            int min = int.MaxValue, minIndex = -1;
+
+            for (int v = 0; v < vertices; v++)
+            {
+                if (!sptSet[v] && dist[v] <= min)
+                {
+                    min = dist[v];
+                    minIndex = v;
+                }
+            }
+
+            return minIndex;
+        }
+
     }
 }

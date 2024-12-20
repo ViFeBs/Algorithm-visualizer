@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|d:\\projetos\\projetos git\\algorithm-visualizer\\algorithm-visualizer\\algorithm-visualizer\\frmsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|solutionrelative:algorithm-visualizer\\frmsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|d:\\projetos\\projetos git\\algorithm-visualizer\\algorithm-visualizer\\algorithm-visualizer\\model\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|solutionrelative:algorithm-visualizer\\model\\graph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|d:\\projetos\\projetos git\\algorithm-visualizer\\algorithm-visualizer\\algorithm-visualizer\\frmsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|solutionrelative:algorithm-visualizer\\frmsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\algorithm-visualizer\\frmsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|solutionrelative:algorithm-visualizer\\frmsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|d:\\projetos\\projetos git\\algorithm-visualizer\\algorithm-visualizer\\algorithm-visualizer\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|solutionrelative:algorithm-visualizer\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\algorithm-visualizer\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|solutionrelative:algorithm-visualizer\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|d:\\projetos\\projetos git\\algorithm-visualizer\\algorithm-visualizer\\algorithm-visualizer\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{681EF9C1-21F3-4AAF-996F-F4AADC070013}|Algorithm-visualizer\\Algorithm-visualizer.csproj|solutionrelative:algorithm-visualizer\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Graph.cs",
               "DocumentMoniker": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\model\\Graph.cs",
               "RelativeDocumentMoniker": "Algorithm-visualizer\\model\\Graph.cs",
               "ToolTip": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\model\\Graph.cs",
               "RelativeToolTip": "Algorithm-visualizer\\model\\Graph.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAADwvzUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAQwKIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-19T00:34:41.429Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "frmMenu.cs",
               "DocumentMoniker": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\frmMenu.cs",
               "RelativeDocumentMoniker": "Algorithm-visualizer\\frmMenu.cs",
@@ -60,24 +60,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "frmMenu.cs [Projeto]",
               "DocumentMoniker": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\frmMenu.cs",
               "RelativeDocumentMoniker": "Algorithm-visualizer\\frmMenu.cs",
               "ToolTip": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\frmMenu.cs [Projeto]",
               "RelativeToolTip": "Algorithm-visualizer\\frmMenu.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T21:38:14.179Z"
+              "WhenOpened": "2024-12-16T21:38:14.179Z",
+              "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmSearch.cs",
               "DocumentMoniker": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\frmSearch.cs",
               "RelativeDocumentMoniker": "Algorithm-visualizer\\frmSearch.cs",
               "ToolTip": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\frmSearch.cs",
               "RelativeToolTip": "Algorithm-visualizer\\frmSearch.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAAAOEAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAADgv2oAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T21:32:50.909Z",
               "EditorCaption": ""
@@ -91,7 +92,8 @@
               "ToolTip": "D:\\projetos\\Projetos GIT\\Algorithm-visualizer\\Algorithm-visualizer\\Algorithm-visualizer\\frmSearch.cs [Projeto]",
               "RelativeToolTip": "Algorithm-visualizer\\frmSearch.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T21:28:06.404Z"
+              "WhenOpened": "2024-12-16T21:28:06.404Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }

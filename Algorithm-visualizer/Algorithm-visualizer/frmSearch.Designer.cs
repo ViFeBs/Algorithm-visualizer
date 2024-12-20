@@ -35,6 +35,7 @@
             lblGraph = new Label();
             lblResult = new Label();
             btnDFS = new Button();
+            btnDijkstra = new Button();
             SuspendLayout();
             // 
             // pnlAnimation
@@ -102,12 +103,23 @@
             btnDFS.UseVisualStyleBackColor = true;
             btnDFS.Click += btnDFS_Click;
             // 
+            // btnDijkstra
+            // 
+            btnDijkstra.Location = new Point(683, 38);
+            btnDijkstra.Name = "btnDijkstra";
+            btnDijkstra.Size = new Size(73, 41);
+            btnDijkstra.TabIndex = 7;
+            btnDijkstra.Text = "Dijkstra";
+            btnDijkstra.UseVisualStyleBackColor = true;
+            btnDijkstra.Click += btnDijkstra_Click;
+            // 
             // frmSearch
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(864, 492);
+            Controls.Add(btnDijkstra);
             Controls.Add(btnDFS);
             Controls.Add(lblResult);
             Controls.Add(lblGraph);
@@ -131,5 +143,6 @@
         private Label lblGraph;
         private Label lblResult;
         private Button btnDFS;
+        private Button btnDijkstra;
     }
 }
