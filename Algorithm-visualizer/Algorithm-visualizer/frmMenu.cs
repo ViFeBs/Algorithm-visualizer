@@ -30,6 +30,13 @@ namespace Algorithm_visualizer
             frmSearch.Show();
             this.Hide();
         }
+
+        private void btnData_Click(object sender, EventArgs e)
+        {
+            frmDatastructure frmData = new frmDatastructure();
+            frmData.Show();
+            this.Hide();
+        }
     }
 
 }

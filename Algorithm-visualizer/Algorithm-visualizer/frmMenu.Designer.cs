@@ -30,11 +30,12 @@
         {
             btnSort = new Button();
             btnSearch = new Button();
+            btnData = new Button();
             SuspendLayout();
             // 
             // btnSort
             // 
-            btnSort.Location = new Point(40, 65);
+            btnSort.Location = new Point(34, 36);
             btnSort.Name = "btnSort";
             btnSort.Size = new Size(105, 45);
             btnSort.TabIndex = 0;
@@ -44,7 +45,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(198, 65);
+            btnSearch.Location = new Point(34, 98);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(105, 45);
             btnSearch.TabIndex = 1;
@@ -52,12 +53,23 @@
             btnSearch.UseVisualStyleBackColor = true;
             btnSearch.Click += btnSearch_Click;
             // 
+            // btnData
+            // 
+            btnData.Location = new Point(34, 158);
+            btnData.Name = "btnData";
+            btnData.Size = new Size(105, 45);
+            btnData.TabIndex = 2;
+            btnData.Text = "Data Structure";
+            btnData.UseVisualStyleBackColor = true;
+            btnData.Click += btnData_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(177, 236);
+            Controls.Add(btnData);
             Controls.Add(btnSearch);
             Controls.Add(btnSort);
             Name = "frmMenu";
@@ -71,5 +83,6 @@
 
         private Button btnSort;
         private Button btnSearch;
+        private Button btnData;
     }
 }
